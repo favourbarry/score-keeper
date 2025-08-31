@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <style>
+        .winner {
+            color: green;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        .loser {
+            color: red;
+            font-weight: bold;
+            font-size: 2em;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <div class="card">
+        <div class="card-image"></div>
+        <figure class="image is-2by1">
+          <img src="https://www.thespruce.com/thmb/wdDzBDkLjPTs0VdCxQCK3cPZ7kc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spr-tier-3-primary-best-ping-pong-paddles-ebrockob-001-fc01c9de113b49b780de381ac71ad39d.jpeg" alt="Placeholder image">
+        </figure>
+        <header class="card-header">
+          <p class="card-header-title">Ping pong score</p>
+          <a href="#" class="href"></a>
+          <button class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </header>
+
+        <div class="card-content">
+          <div class="content">
+           <h1 class="title is-1">Player 1: <span id="p1Score">0</span></h1> to <h1 class="title is-1">Player 2: <span id="p2Score">0</span></h1>
+            <p class="subtitle">use the buttons beside to update the score</p>
+            <label for="winningScore" class="label is-large is-inline">Winning Score:</label>
+            <div class="select is-rounded">
+              <select name="winningScore">
+                  <option value="5">First to 5</option>
+                  <option value="10">First to 10</option>
+                  <option value="15">First to 15</option>
+              </select>
+            </div>
+        <footer class="card-footer">  
+            <button class="button is-primary card-footer-item">Player 1 +1</button>
+            <button class="button is-primary card-footer-item">Player 2 +1</button>
+          <a href="#" class="card-footer-item">Save</a>
+          <a href="#" class="card-footer-item">Edit</a>
+          <a href="#" class="card-footer-item">Delete</a>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+    <form id="scoreForm">
+        <select name="winningScore">
+            <option value="5">First to 5</option>
+            <option value="10">First to 10</option>
+            <option value="15">First to 15</option>
+        </select>
+        <button type="button" id="p1Button">+1 Player 1</button> 
+        <button type="button" id="p2Button">+1 Player 2</button>
+        <button type="button" id="reset">Reset</button>
+    </form>
+    <ul id="scoreList"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
